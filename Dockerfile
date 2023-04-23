@@ -2,6 +2,7 @@ FROM arm64v8/eclipse-temurin:17-jdk-focal AS build
 WORKDIR /workspace/app
 
 COPY . /workspace/app
+RUN chmod +x gradlew
 RUN ./gradlew clean build
 RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*-SNAPSHOT.jar)
 
