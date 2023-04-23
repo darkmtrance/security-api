@@ -1,0 +1,30 @@
+#autenticacion
+POST http://localhost:8080/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "email": "mtomaylla@incafact.com",
+  "password": "1234"
+}
+
+#registrar usuario
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstname": "Michael",
+  "lastname": "Tomaylla",
+  "email": "mtomaylla@incafact.com",
+  "password": "1234"
+}
+
+#verificar con token
+http://localhost:8080/api/v1/demo-controller/hello
+Host: localhost
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdG9tYXlsbGFAaW5jYWZhY3QuY29tIiwiaWF0IjoxNjgyMTgyMDMxLCJleHAiOjE2ODIxODIwOTF9.AEd7emT7YbCvdN2Q3TvAD0a6n5dzzGfdLX1LRztzuyo
+
+
+
+
+
