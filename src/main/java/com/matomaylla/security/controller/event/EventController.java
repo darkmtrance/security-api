@@ -23,7 +23,7 @@ public class EventController {
     private final EventService service;
 
     @PostMapping("/save")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin
     public ResponseEntity<EventResponse> save(@RequestBody EventRequest request){
         logger.info(request.getTitle());
         logger.info(""+request.getStart());
@@ -31,7 +31,7 @@ public class EventController {
     }
 
     @GetMapping("/listar")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin
     public ResponseEntity<List<EventResponse>> listar(){
         return ResponseEntity.ok(service.listar());
     }
