@@ -1,4 +1,4 @@
-package com.matomaylla.security.demo;
+package com.matomaylla.security.controller.demo;
 
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

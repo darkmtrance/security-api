@@ -1,5 +1,6 @@
-package com.matomaylla.security.user;
+package com.matomaylla.security.repository.user;
 
+import com.matomaylla.security.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

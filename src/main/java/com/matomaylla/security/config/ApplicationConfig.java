@@ -1,6 +1,6 @@
 package com.matomaylla.security.config;
 
-import com.matomaylla.security.user.UserRepository;
+import com.matomaylla.security.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

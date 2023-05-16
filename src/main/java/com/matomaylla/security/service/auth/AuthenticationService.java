@@ -1,9 +1,8 @@
-package com.matomaylla.security.auth;
+package com.matomaylla.security.service.auth;
 
 import com.matomaylla.security.config.JwtService;
-import com.matomaylla.security.user.Role;
-import com.matomaylla.security.user.User;
-import com.matomaylla.security.user.UserRepository;
+import com.matomaylla.security.model.user.*;
+import com.matomaylla.security.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

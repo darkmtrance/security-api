@@ -1,4 +1,4 @@
-package com.matomaylla.security.auth;
+package com.matomaylla.security.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

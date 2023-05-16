@@ -30,7 +30,8 @@ public class SecurityConfiguration {
             "/api/public/authenticate",
             "/actuator/*",
             "/swagger-ui/**",
-            "/api/v1/auth/**"
+            "/api/v1/auth/**",
+            "/api/v1/event/**"
     };
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

@@ -1,4 +1,4 @@
-package com.matomaylla.security.user;
+package com.matomaylla.security.model.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.matomaylla.security.auth;
+package com.matomaylla.security.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
-    private String firstname;
-    private String lastname;
+public class AuthenticationRequest {
     private String email;
     private String password;
 }

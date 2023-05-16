@@ -1,7 +1,10 @@
-package com.matomaylla.security.auth;
+package com.matomaylla.security.controller.auth;
 
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import com.matomaylla.security.model.user.AuthenticationRequest;
+import com.matomaylla.security.model.user.AuthenticationResponse;
+import com.matomaylla.security.model.user.RegisterRequest;
+import com.matomaylla.security.service.auth.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
