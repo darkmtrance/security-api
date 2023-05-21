@@ -16,4 +16,6 @@ public class EventResponse {
     private String title;
     private Date start;
     private Date end;
+    private String backgroundColor;
+    private String textColor;
 }

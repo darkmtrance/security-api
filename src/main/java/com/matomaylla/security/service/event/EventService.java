@@ -18,14 +18,14 @@ public class EventService {
 
     public EventResponse save(EventRequest request){
         var event = Event.builder().title(request.getTitle()).startDate(request.getStart())
-                .endDate(request.getEnd()).build();
+                .endDate(request.getEnd()).backgroundColor(request.getBackgroundColor()).build();
         Event eventResultado = repository.save(event);
         return EventResponse.builder().id(eventResultado.getId()).title(eventResultado.getTitle())
-                .start(eventResultado.getStartDate()).end(eventResultado.getEndDate()).build();
+                .start(eventResultado.getStartDate()).end(eventResultado.getEndDate()).backgroundColor(eventResultado.getBackgroundColor()).build();
     }
 
     public List<EventResponse> listar(){
-        List<EventResponse> eventResultado = repository.findAll().stream().map(p-> EventResponse.builder().id(p.getId()).title(p.getTitle()).start(p.getStartDate()).end(p.getEndDate()).build()).collect(Collectors.toList());
+        List<EventResponse> eventResultado = repository.findAll().stream().map(p-> EventResponse.builder().id(p.getId()).title(p.getTitle()).start(p.getStartDate()).end(p.getEndDate()).backgroundColor(p.getBackgroundColor()).build()).collect(Collectors.toList());
        return eventResultado;
     }
 }

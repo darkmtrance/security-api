@@ -26,4 +26,6 @@ public class Event {
     private String title;
     private Date startDate;
     private Date endDate;
+    private String backgroundColor;
+    private String textColor;
 }
