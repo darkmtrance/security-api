@@ -28,4 +28,12 @@ public class EventService {
         List<EventResponse> eventResultado = repository.findAll().stream().map(p-> EventResponse.builder().id(p.getId()).title(p.getTitle()).start(p.getStartDate()).end(p.getEndDate()).backgroundColor(p.getBackgroundColor()).textColor(p.getTextColor()).build()).collect(Collectors.toList());
        return eventResultado;
     }
+
+    public void borrarEntidad(Integer id){
+        repository.deleteById(id);
+    }
+
+    public Boolean existeEntidad(Integer id){
+        return repository.existsById(id);
+    }
 }

@@ -25,8 +25,6 @@ public class EventController {
     @PostMapping("/save")
     @CrossOrigin
     public ResponseEntity<EventResponse> save(@RequestBody EventRequest request){
-        logger.info(request.getTitle());
-        logger.info(""+request.getStart());
         return ResponseEntity.ok(service.save(request));
     }
 
@@ -34,5 +32,16 @@ public class EventController {
     @CrossOrigin
     public ResponseEntity<List<EventResponse>> listar(){
         return ResponseEntity.ok(service.listar());
+    }
+
+    @DeleteMapping("/{id}")
+    @CrossOrigin
+    public ResponseEntity<String> delete(@PathVariable("id") Integer id){
+        if(service.existeEntidad(id)) {
+            service.borrarEntidad(id);
+            return ResponseEntity.ok().body("Entidad eliminada correctamente");
+        }else{
+            return ResponseEntity.notFound().build();
+        }
     }
 }
