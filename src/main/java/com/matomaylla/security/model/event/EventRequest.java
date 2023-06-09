@@ -15,4 +15,6 @@ public class EventRequest {
     private String textColor;
     private String url;
     private String backgroundColor;
+    private String usuNomPublicacion;
+    private Integer idSieweb;
 }

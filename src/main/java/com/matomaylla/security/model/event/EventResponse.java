@@ -1,14 +1,13 @@
 package com.matomaylla.security.model.event;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
 @Data
 @Builder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class EventResponse {
@@ -18,4 +17,6 @@ public class EventResponse {
     private Date end;
     private String backgroundColor;
     private String textColor;
+    private Integer idSieweb;
+    private String usuNomPublicacion;
 }

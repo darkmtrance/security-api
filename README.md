@@ -32,6 +32,7 @@ This is a Security API using Spring Boot 3.0 and JSON Web Tokens (JWT)
 - [Swagger] (https://swagger.io/) - API docs
 - [JSON Web Tokens] (https://jwt.io/) - JWT
 - [Spring Security] (https://docs.spring.io/spring-security/reference/index.html)
+- [Mapstruct] (https://mapstruct.org/)
 - [Gradle] (https://gradle.org/)
 - [JDK 17+] (https://learn.microsoft.com/es-es/java/openjdk/download)
 
@@ -48,6 +49,8 @@ add Environment Variables:
 spring.datasource.url=${DATABASE_URL}
 spring.datasource.username=${DATABASE_USER}
 spring.datasource.password=${DATABASE_PASSWORD}
+##Modify to false
+scheduling.enabled=false
 ```
 or change the values `${DATABASE_URL}` , `${DATABASE_USER}` and `${DATABASE_PASSWORD}` with the MYSQL connection string.
 
